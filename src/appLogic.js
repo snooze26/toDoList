@@ -39,6 +39,10 @@ export class Project {
     removeTodDo(todoTitle){
         this.todos = this.todos.filter(todo => todo.title !== todoTitle);
     }
+
+    //extendTodo(todo){
+
+    //}
 }
 const usersToDo = retrieveTodo();
 usersToDo.displayInfo();
