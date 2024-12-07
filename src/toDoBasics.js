@@ -23,5 +23,22 @@ export function retrieveTodo() {
 
     return new toDo(title, description, dueDate, priority, notes);
 }
+
+export class Project {
+    constructor(projectName){
+        this.name = projectName;
+        this.todos = [];
+    };
+
+    //add toDo function
+    addToDo(todo){
+        this.todos.push(todo);
+    };
+
+    //remove toDo function
+    removeTodDo(todoTitle){
+        this.todos = this.todos.filter(todo => todo.title !== todoTitle);
+    }
+}
 const usersToDo = retrieveTodo();
 usersToDo.displayInfo();
