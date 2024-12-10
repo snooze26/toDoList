@@ -1,4 +1,13 @@
-import {retrieveTodo, toDo} from "./appLogic.js"
+import {retrieveTodo, toDo} from "./createToDo_Logic.js";
+import { createTodo } from "./createToDo_DOM.js";
 
-const usersToDo = retrieveTodo();
-usersToDo.displayInfo();
+
+
+const addButton = document.querySelector("#addTodo");
+addButton.addEventListener("click", () => {
+    const usersToDo = retrieveTodo();
+
+    if(usersToDo){
+        createTodo(usersToDo);
+    }
+})

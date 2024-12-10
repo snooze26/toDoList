@@ -53,5 +53,4 @@ export class Project {
 
     //}
 }
-const usersToDo = retrieveTodo();
-usersToDo.displayInfo();
+
