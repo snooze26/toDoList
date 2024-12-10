@@ -16,10 +16,19 @@ export class toDo {
 
 export function retrieveTodo() {
     const title = prompt("Enter the title:");
+    if(!title) return null;
+
     const description = prompt("Enter the description");
+    if(!description) return null;
+
     const dueDate = prompt("When is this due?");
+    if(!dueDate) return null;
+    
     const priority = prompt("Rate the level of priority: High, Medium, Low");
+    if(!priority) return (null);
+
     const notes = prompt("Insert any notes");
+    if(!notes) return (null);
 
     return new toDo(title, description, dueDate, priority, notes);
 }
